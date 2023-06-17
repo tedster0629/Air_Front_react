@@ -1,0 +1,66 @@
+/*!
+
+=========================================================
+* Black Dashboard React v1.2.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/black-dashboard-react
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+import React from "react";
+
+// reactstrap components
+import { Card, CardHeader, CardBody, Row, Col, CardFooter, Button } from "reactstrap";
+
+function PaymentMethod() {
+  return (
+    <>
+      <div className="content">
+        <Row>
+          <Col md="12">
+            <Card className="paycard">
+              <CardHeader>
+                <h className="paymenttitle">Payment Method</h>
+              </CardHeader>
+              <CardBody>
+                <Row>
+                  <Col lg="3">
+                    <Card className="paymentcard">
+                      <img className="cardback" src={require("assets/img/card1.jpg")} alt = "Projectimage" />
+                      
+                      <div>
+                        <i className="tim-icons icon-pencil editicon"></i>
+                        <a href="https://www.example.com" className="edittitle">Edit</a>
+                      </div>
+                      <div>
+                        <i className="tim-icons icon-trash-simple deleteicon"></i>
+                        <a href="https://www.example.com" className="deletetitle">Delete</a>
+                      </div>
+                    </Card>
+                  </Col>                                              
+                </Row>
+              </CardBody>
+              <CardFooter>
+              <div className="button-container addbutton" >
+                  <Button className="btn btn-round" color="primary" style={{float : "right"}}>
+                    + Add a Card
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+          </Col>
+        </Row>
+      </div>
+    </>
+  );
+}
+
+export default PaymentMethod;
