@@ -34,6 +34,9 @@ import {
 var ps;
 
 function Sidebar(props) {
+
+  const currentPath = window.location.pathname;
+
   const location = useLocation();
   const sidebarRef = React.useRef(null);
   // verifies if routeName is the one active (in browser input)
@@ -124,7 +127,7 @@ function Sidebar(props) {
                 return (
                   <li
                     className={
-                      activeRoute(prop.path) + (prop.pro ? " active-pro" : "")
+                      "/admin/" + prop.path == currentPath ? "active-side" : ""
                     }
                     key={key}
                   >
@@ -133,7 +136,7 @@ function Sidebar(props) {
                       className="nav-link"
                       onClick={props.toggleSidebar}
                     >
-                      <i className={prop.icon} />
+                      <i className={prop.icon} style={{color : "/admin" + prop.path == currentPath ? "red" : ""}} />
                       <p>{rtlActive ? prop.rtlName : prop.name}</p>
                     </NavLink>
                   </li>
@@ -141,7 +144,7 @@ function Sidebar(props) {
               })}
               <li className="logouticon">
                 <ReactstrapNavLink href="#">
-                  <i className="tim-icons icon-spaceship" color ="primary"/>
+                  <i className="tim-icons icon-minimal-left" color ="primary"/>
                   <p>Logout</p>
                 </ReactstrapNavLink>
               </li>

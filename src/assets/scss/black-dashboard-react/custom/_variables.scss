@@ -15,7 +15,7 @@ $enable-print-styles:       true !default;
 $white:    #ffffff !default;
 $gray-100: #f6f9fc !default;
 $gray-200: #e9ecef !default;
-$gray-300: #e3e3e3 !default;
+$gray-300: #2d3b48 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;   // Line footer color
@@ -58,7 +58,7 @@ $line-height:                 1.35em         !default;
 
 
 $opacity-gray-3:             rgba(222,222,222, .3) !default;
-$opacity-gray-5:             rgba(222,222,222, .5) !default;
+$opacity-gray-5:             rgba(222, 222, 222, 0) !default;
 $opacity-gray-8:             rgba(222,222,222, .8) !default;
 
 
@@ -117,7 +117,7 @@ $black-states:         #1d253b !default;
 $sidebarbackgrondcolor : rgb(35, 46, 55) !default;
 
 
-$background-black:           #1e1e2f !default;
+$background-black:           #1e1e2f00 !default;
 $background-states-black:    #1e1e24 !default;
 
 // opacity

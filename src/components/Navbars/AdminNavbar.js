@@ -18,7 +18,7 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-
+import { useNavigate } from "react-router-dom";
 // reactstrap components
 import {
   // Button,
@@ -71,12 +71,17 @@ function AdminNavbar(props) {
   const toggleModalSearch = () => {
     setmodalSearch(!modalSearch);
   };
+
+  const navigate = useNavigate();
+  const gobackDash = () =>  {
+    navigate('/admin/Dashboard')
+  } 
   return (
     <>
       <Navbar className={classNames("navbar-absolute", color)} expand="lg">
         <Container fluid>
           <div className="navbar-wrapper">
-            <img src={require("assets/image/logo.png")} width={"5%"} alt="Air Icon"></img>
+            <img style={{cursor : "pointer"}} src={require("assets/image/logo.png")} width={"5%"} alt="Air Icon" onClick={gobackDash}></img>
             <div
               className={classNames("navbar-toggle d-inline", {
                 toggled: props.sidebarOpened,

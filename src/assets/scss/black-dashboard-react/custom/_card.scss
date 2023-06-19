@@ -396,3 +396,194 @@ border-radius: 15px;
   justify-content: space-evenly;
 
 }
+
+.Projectdes{
+box-sizing: border-box;
+
+position: absolute;
+width: 809px;
+height: 309px;
+
+
+/* BG 2 (100% - Color Dodge) */
+
+background: #232e37;
+background-blend-mode: color-dodge;
+/* Border line (4%) */
+
+border: 0.75px solid #ffffff0a;
+border-radius: 10px;
+}
+
+.dbscroll {
+  box-sizing: border-box;
+
+position: absolute;
+width: 683px;
+height: 100px;
+// left: calc(50% - 683px/2 - 464.5px);
+top: 438px;
+
+
+/* BG 2 (100% - Color Dodge) */
+
+background: #232e37;
+background-blend-mode: color-dodge;
+/* Border line (4%) */
+
+border: 0.75px solid #ffffff0a;
+border-radius: 10px;
+}
+.dbtext{
+  display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.speedSc{
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 683px;
+  height: 100px;
+  // left: calc(50% - 683px/2 - 464.5px);
+  top: 556px;
+  
+  
+  /* BG 2 (100% - Color Dodge) */
+  
+  background: #232e37;
+  background-blend-mode: color-dodge;
+  /* Border line (4%) */
+  
+  border: 0.75px solid #ffffff0a;
+  border-radius: 10px;
+}
+
+.pitch{
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 108px;
+  height: 218px;
+  left: 1026px;
+  top: 438px;
+  
+  
+  /* BG 2 (100% - Color Dodge) */
+  
+  background: #232e37;
+  background-blend-mode: color-dodge;
+  /* Border line (4%) */
+  
+  border: 0.75px solid #ffffff0a;
+  border-radius: 10px;
+}
+.workcd{
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1570px;
+  height: 280px;
+  top: 680px;
+  
+  
+  /* BG 2 (100% - Color Dodge) */
+  
+  background: #232e37;
+  background-blend-mode: color-dodge;
+  /* Border line (4%) */
+  
+  border: 0.75px solid #ffffff0a;
+  border-radius: 10px;
+}
+
+.navclass {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+   
+}
+.iconcolor {
+  color: #FFFFFF;
+}
+
+.cardheader {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.verticalRange {
+    -webkit-appearance: none;
+    height: 200px;
+    border-radius: 5px;
+    background: #ccc;
+    outline: none;
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical;
+}
+
+.navborder {
+  border-right: 2px solid #354451;
+  padding-right: 30px;
+}
+
+.RachelCard {
+  border : 2px solid #90959A;
+  box-sizing: border-box;
+  width: 170px;
+  height: 40px;
+  border: 1px solid #415362;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+// .scrollbar {
+//     height: 300px;
+//     width: 50%;
+//     overflow: auto;
+//     padding: 0 10px;
+// }
+// /*       ScrollBar 1        */
+
+// #scrollbar1::-webkit-scrollbar {
+//     width: 10px;
+// }
+
+// #scrollbar1::-webkit-scrollbar-track {
+//     border-radius: 8px;
+//     background-color: #e7e7e7;
+//     border: 1px solid #cacaca;
+// }
+
+// #scrollbar1::-webkit-scrollbar-thumb {
+//     border-radius: 8px;
+//     background-color: #415362
+// }
+
+.joyfulcard {
+  border : 2px solid #90959A;
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid #415362;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.screenimage {
+  position: absolute;
+  width: 716px;
+  height: 480px;
+  left: 1160px;
+  top: 104px;
+  border-radius: 16px;
+
+}

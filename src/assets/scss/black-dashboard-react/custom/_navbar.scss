@@ -3,7 +3,6 @@
   width: 100%;
   z-index: 1050;
   background: $navbar-color;
-
   .photo {
     display: inline-block;
     // height: 22%;
@@ -31,7 +30,7 @@
   }
 
   &.navbar-absolute{
-    position: absolute;
+    position: fixed;
     z-index: 1050;
   }
 
