@@ -1,324 +1,349 @@
-.card{
-    // background: $card-black-background;
-    background: #232e37;
-    border: 0;
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
-    box-shadow: $box-shadow;
+.card {
+  // background: $card-black-background;
+  background: #232e37;
+  border: 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: $box-shadow;
 
 
-    .projectimg{
-      position: absolute;
-      width: 6.875rem;
-      height: 6.875rem;
-      top: 1.25rem;
-      left: 1.25rem;
-      border-radius: 1.25rem;
-    }
+  .projectimg {
+    position: absolute;
+    width: 6.875rem;
+    height: 6.875rem;
+    top: 1.25rem;
+    left: 1.25rem;
+    border-radius: 1.25rem;
+  }
 
-    .projecttitle{
-      position: absolute;
-      width: 159px;
-      height: 50px;
-      left: 146px;
-      top: 33px;
+  .projecttitle {
+    position: absolute;
+    width: 159px;
+    height: 50px;
+    left: 146px;
+    top: 33px;
 
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 24px;
-      /* or 133% */
-
-
-      color: #FFFFFF;
-    }
-    .projectdate{
-      position: absolute;
-      width: 159px;
-      height: 50px;
-      left: 146px;
-      top: 53px;
-
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 24px;
-      /* or 133% */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
 
 
-      color: #FFFFFF;
+    color: #FFFFFF;
+  }
 
-    }
+  .projectdate {
+    position: absolute;
+    width: 159px;
+    height: 50px;
+    left: 146px;
+    top: 53px;
 
-    .editicon{
-      position: absolute;
-      width: 26px;
-      height: 17px;
-      left: 150px;
-      top: 99px;
-
-      color: #90959A;  
-    }
-
-    .edittitle {
-      position: absolute;
-      width: 26px;
-      height: 17px;
-      left: 170px;
-      top: 99px;
-
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      /* identical to box height */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
 
 
-      color: #90959A;
-    }
+    color: #FFFFFF;
 
-    .deleteicon{
-      position: absolute;
-      width: 44px;
-      height: 17px;
-      left: 234px;
-      top: 99px;
+  }
 
-      color: #90959A;
-    }
-    .deletetitle{
-      position: absolute;
-      width: 44px;
-      height: 17px;
-      left: 254px;
-      top: 99px;
+  .editicon {
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    left: 150px;
+    top: 99px;
 
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      /* identical to box height */
+    color: #90959A;
+  }
+
+  .edittitle {
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    left: 170px;
+    top: 99px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
 
 
-      color: #90959A;
-    }
-    label{
-      color: rgba($white, 0.6);
+    color: #90959A;
+  }
+
+  .deleteicon {
+    position: absolute;
+    width: 44px;
+    height: 17px;
+    left: 234px;
+    top: 99px;
+
+    color: #90959A;
+  }
+
+  .deletetitle {
+    position: absolute;
+    width: 44px;
+    height: 17px;
+    left: 254px;
+    top: 99px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #90959A;
+  }
+
+  label {
+    color: rgba($white, 0.6);
+  }
+
+  .card-title {
+    margin-bottom: .75rem;
+  }
+
+  .card-body {
+    padding: 15px;
+
+    &.table-full-width {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .card-title {
+      color: $white;
+      text-transform: inherit;
+      font-weight: $font-weight-light;
       margin-bottom: .75rem;
     }
 
-    .card-body{
-      padding: 15px;
-
-      &.table-full-width{
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .card-title{
-        color: $white;
-        text-transform: inherit;
-        font-weight: $font-weight-light;
-        margin-bottom: .75rem;
-      }
-
-      .card-description, .card-category{
-        color: rgba($white, 0.6);
-      }
-
+    .card-description,
+    .card-category {
+      color: rgba($white, 0.6);
     }
 
-    .card-header{
-      &:not([data-background-color]){
-        background-color: transparent;
-      }
-      padding: 15px 15px 0;
-      border: 0;
-      color: rgba($white,0.8);
+  }
 
-      .card-title{
-          color: $white;
-          font-weight: 100;
-      }
-
-      .card-category{
-        color: $dark-gray;
-        margin-bottom: 5px;
-        font-weight: 300;
-      }
+  .card-header {
+    &:not([data-background-color]) {
+      background-color: transparent;
     }
 
-    .map{
-        border-radius: $border-radius-sm;
+    padding: 15px 15px 0;
+    border: 0;
+    color: rgba($white, 0.8);
 
-        &.map-big{
-          height: 420px;
-        }
+    .card-title {
+      color: $white;
+      font-weight: 100;
     }
 
-    &.card-white{
-      background: $white;
+    .card-category {
+      color: $dark-gray;
+      margin-bottom: 5px;
+      font-weight: 300;
+    }
+  }
 
-      .card-title{
-        color: $black;
-      }
-      .card-category, .stats{
-        color: $card-stats-gray;
-      }
+  .map {
+    border-radius: $border-radius-sm;
 
-      //style for inputs
+    &.map-big {
+      height: 420px;
+    }
+  }
 
-      @include form-control-placeholder(rgba($black,0.4), 1);
-        .has-danger{
-          .form-control, .input-group-prepend .input-group-text{
-            border-color: $danger-states;
-          }
-        }
+  &.card-white {
+    background: $white;
 
-        .input-group-prepend .input-group-text{
-          border-color: rgba($black-states,0.2);
-          color: $black-states;
-        }
+    .card-title {
+      color: $black;
+    }
 
-        .form-control{
-          color: $black;
-          border-color: rgba($black-states,0.2);
-          &:focus{
-            border-color: $primary;
-          }
-        }
-        label:not(.btn){
-          color: $default;
-        }
+    .card-category,
+    .stats {
+      color: $card-stats-gray;
+    }
 
-      .form-group.no-border,
-      .input-group.no-border {
-          .form-control,
-          .form-control + .input-group-prepend .input-group-text,
-          .form-control + .input-group-append .input-group-text,
-          .input-group-prepend .input-group-text,
-          .input-group-append .input-group-text{
-            background-color: $opacity-gray-3;
-              &:focus,
-              &:active,
-              &:active{
-                background-color: $opacity-gray-5;
-              }
-          }
+    //style for inputs
 
-          .form-control {
-              &:focus {
-                  & + .input-group-prepend .input-group-text,
-                  & + .input-group-append .input-group-text{
-                    background-color: $transparent-bg;
-                  }
-              }
-          }
+    @include form-control-placeholder(rgba($black, 0.4), 1);
 
+    .has-danger {
 
-      }
-
-      .input-group[disabled]{
-          .input-group-prepend .input-group-text,
-          .input-group-append .input-group-text{
-              background-color: $black;
-          }
-      }
-
-      .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
-        background: $light-gray;
-        border-color: rgba($black-states,0.3);
-      }
-
-      .input-group-focus{
-          .input-group-prepend .input-group-text,
-          .input-group-append .input-group-text,
-          .form-control{
-            background-color: $white;
-            border-color: $primary;
-          }
-
-          &.no-border{
-              .input-group-prepend .input-group-text,
-              .input-group-append .input-group-text{
-
-                  background-color: $opacity-gray-5;
-              }
-          }
-      }
+      .form-control,
       .input-group-prepend .input-group-text {
-          border-right: none;
-      }
-
-      .input-group-append .input-group-text {
-          border-left: none;
-      }
-
-      .has-danger .form-control:focus, .has-success.input-group-focus .input-group-append .input-group-text, .has-success.input-group-focus .input-group-prepend .input-group-text {
         border-color: $danger-states;
       }
+    }
 
-      .has-success .form-control:focus, .has-success.input-group-focus .input-group-append .input-group-text, .has-success.input-group-focus .input-group-prepend .input-group-text {
-        border-color: darken($success, 10%);
+    .input-group-prepend .input-group-text {
+      border-color: rgba($black-states, 0.2);
+      color: $black-states;
+    }
+
+    .form-control {
+      color: $black;
+      border-color: rgba($black-states, 0.2);
+
+      &:focus {
+        border-color: $primary;
       }
     }
 
-
-    &.card-plain {
-      background: transparent;
-      box-shadow: none;
+    label:not(.btn) {
+      color: $default;
     }
 
-    .image{
-        overflow: hidden;
-        height: 200px;
+    .form-group.no-border,
+    .input-group.no-border {
+
+      .form-control,
+      .form-control+.input-group-prepend .input-group-text,
+      .form-control+.input-group-append .input-group-text,
+      .input-group-prepend .input-group-text,
+      .input-group-append .input-group-text {
+        background-color: $opacity-gray-3;
+
+        &:focus,
+        &:active,
+        &:active {
+          background-color: $opacity-gray-5;
+        }
+      }
+
+      .form-control {
+        &:focus {
+
+          &+.input-group-prepend .input-group-text,
+          &+.input-group-append .input-group-text {
+            background-color: $transparent-bg;
+          }
+        }
+      }
+
+
+    }
+
+    .input-group[disabled] {
+
+      .input-group-prepend .input-group-text,
+      .input-group-append .input-group-text {
+        background-color: $black;
+      }
+    }
+
+    .form-control[disabled],
+    .form-control[readonly],
+    fieldset[disabled] .form-control {
+      background: $light-gray;
+      border-color: rgba($black-states, 0.3);
+    }
+
+    .input-group-focus {
+
+      .input-group-prepend .input-group-text,
+      .input-group-append .input-group-text,
+      .form-control {
+        background-color: $white;
+        border-color: $primary;
+      }
+
+      &.no-border {
+
+        .input-group-prepend .input-group-text,
+        .input-group-append .input-group-text {
+
+          background-color: $opacity-gray-5;
+        }
+      }
+    }
+
+    .input-group-prepend .input-group-text {
+      border-right: none;
+    }
+
+    .input-group-append .input-group-text {
+      border-left: none;
+    }
+
+    .has-danger .form-control:focus,
+    .has-success.input-group-focus .input-group-append .input-group-text,
+    .has-success.input-group-focus .input-group-prepend .input-group-text {
+      border-color: $danger-states;
+    }
+
+    .has-success .form-control:focus,
+    .has-success.input-group-focus .input-group-append .input-group-text,
+    .has-success.input-group-focus .input-group-prepend .input-group-text {
+      border-color: darken($success, 10%);
+    }
+  }
+
+
+  &.card-plain {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .image {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: $font-size-sm;
+    margin-bottom: 5px;
+
+  }
+
+  .card-footer {
+    background-color: transparent;
+    border: 0;
+    padding: 15px;
+
+
+    .stats {
+      i {
+        margin-right: 5px;
         position: relative;
+
+      }
     }
 
-    .avatar{
-        width: 30px;
-        height: 30px;
-        overflow: hidden;
-        border-radius: 50%;
-        margin-bottom: 15px;
+    h6 {
+      margin-bottom: 0;
+      padding: 7px 0;
     }
-
-    label{
-        font-size: $font-size-sm;
-        margin-bottom: 5px;
-
-    }
-
-    .card-footer{
-        background-color: transparent;
-        border: 0;
-        padding: 15px;
-
-
-        .stats{
-            i{
-                margin-right: 5px;
-                position: relative;
-
-            }
-        }
-
-        h6{
-          margin-bottom: 0;
-          padding: 7px 0;
-        }
-    }
+  }
 }
 
-.card-body{
+.card-body {
   padding: $card-spacer-y;
 }
 
@@ -331,7 +356,7 @@
   }
 }
 
-.projectcard{
+.projectcard {
   // background: $card-black-background;
   background: #232e37;
   border: 0;
@@ -346,7 +371,7 @@
 
 
 
-.paymentcard{
+.paymentcard {
   background: $card-black-background;
   position: absolute;
   width: 350px;
@@ -359,8 +384,8 @@
   border-radius: 15px;
 }
 
-.paymenttitle{
-  
+.paymenttitle {
+
   position: absolute;
   width: 167px;
   height: 24px;
@@ -374,137 +399,160 @@
   color: #FFFFFF;
 }
 
-.paycard{
-  height: 52rem;
+.paycard {
+  height: 90vh;
 }
-.cardback{
+
+.cardback {
   position: absolute;
   width: 350px;
   height: 200px;
   left: 0;
   top: 0;
 
-background: #354451;
-opacity: 0.5;
-border-radius: 15px;
+  background: #354451;
+  opacity: 0.5;
+  border-radius: 15px;
 }
 
 .addbutton {
-  
+
   display: flex;
   align-content: space-between;
   justify-content: space-evenly;
 
 }
 
-.Projectdes{
-box-sizing: border-box;
+.Projectdes {
+  box-sizing: border-box;
 
-position: absolute;
-width: 809px;
-height: 309px;
+  // position: absolute;
+  width: 100%;
+  height: 30vh;
 
 
-/* BG 2 (100% - Color Dodge) */
+  /* BG 2 (100% - Color Dodge) */
 
-background: #232e37;
-background-blend-mode: color-dodge;
-/* Border line (4%) */
+  background: #232e37;
+  background-blend-mode: color-dodge;
+  /* Border line (4%) */
 
-border: 0.75px solid #ffffff0a;
-border-radius: 10px;
+  border: 0.75px solid #ffffff0a;
+  border-radius: 10px;
+}
+
+.Videocard{
+  box-sizing: border-box;
+
+  // position: absolute;
+  width: 100%;
+  height: 51.8vh;
+
+
+  /* BG 2 (100% - Color Dodge) */
+
+  background: #232e37;
+  background-blend-mode: color-dodge;
+  /* Border line (4%) */
+
+  border: 0.75px solid #ffffff0a;
+  border-radius: 10px;
 }
 
 .dbscroll {
   box-sizing: border-box;
 
-position: absolute;
-width: 683px;
-height: 100px;
-// left: calc(50% - 683px/2 - 464.5px);
-top: 438px;
-
-
-/* BG 2 (100% - Color Dodge) */
-
-background: #232e37;
-background-blend-mode: color-dodge;
-/* Border line (4%) */
-
-border: 0.75px solid #ffffff0a;
-border-radius: 10px;
-}
-.dbtext{
-  display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-}
-
-.speedSc{
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 683px;
-  height: 100px;
+  // position: absolute;
+  width: 100%;
+  height: 7.5vh;
   // left: calc(50% - 683px/2 - 464.5px);
-  top: 556px;
-  
-  
+  // top: 438px;
+
+
   /* BG 2 (100% - Color Dodge) */
-  
+
   background: #232e37;
   background-blend-mode: color-dodge;
   /* Border line (4%) */
-  
+
   border: 0.75px solid #ffffff0a;
   border-radius: 10px;
 }
 
-.pitch{
+.dbtext {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.speedSc {
   box-sizing: border-box;
 
-  position: absolute;
-  width: 108px;
-  height: 218px;
-  left: 1026px;
-  top: 438px;
-  
-  
+  // position: absolute;
+  width: 100%;
+  height: 7.5vh;
+  // left: calc(50% - 683px/2 - 464.5px);
+  // top: 556px;
+
+
   /* BG 2 (100% - Color Dodge) */
-  
+
   background: #232e37;
   background-blend-mode: color-dodge;
   /* Border line (4%) */
-  
+
   border: 0.75px solid #ffffff0a;
   border-radius: 10px;
 }
-.workcd{
+
+.pitch {
   box-sizing: border-box;
 
-  position: absolute;
-  width: 1570px;
-  height: 280px;
-  top: 680px;
-  
-  
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+  // left: 46%;
+  // margin-left: 33%;
+  // top: 438px;
+
+
   /* BG 2 (100% - Color Dodge) */
-  
+
   background: #232e37;
   background-blend-mode: color-dodge;
   /* Border line (4%) */
-  
+
+  border: 0.75px solid #ffffff0a;
+  border-radius: 10px;
+}
+
+.workcd {
+  box-sizing: border-box;
+
+  // position: absolute;
+  // width: 82%;
+  height: 30vh;
+  // top: 680px;
+
+
+  /* BG 2 (100% - Color Dodge) */
+
+  background: #232e37;
+  background-blend-mode: color-dodge;
+  /* Border line (4%) */
+
   border: 0.75px solid #ffffff0a;
   border-radius: 10px;
 }
 
 .navclass {
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 
-   
+
 }
+
 .iconcolor {
   color: #FFFFFF;
 }
@@ -515,13 +563,14 @@ border-radius: 10px;
 }
 
 .verticalRange {
-    -webkit-appearance: none;
-    height: 200px;
-    border-radius: 5px;
-    background: #ccc;
-    outline: none;
-    writing-mode: bt-lr; /* IE */
-    -webkit-appearance: slider-vertical;
+  -webkit-appearance: none;
+  height: 200px;
+  border-radius: 5px;
+  background: #ccc;
+  outline: none;
+  writing-mode: bt-lr;
+  /* IE */
+  -webkit-appearance: slider-vertical;
 }
 
 .navborder {
@@ -530,7 +579,7 @@ border-radius: 10px;
 }
 
 .RachelCard {
-  border : 2px solid #90959A;
+  border: 2px solid #90959A;
   box-sizing: border-box;
   width: 170px;
   height: 40px;
@@ -567,7 +616,7 @@ border-radius: 10px;
 // }
 
 .joyfulcard {
-  border : 2px solid #90959A;
+  border: 2px solid #90959A;
   box-sizing: border-box;
   height: 40px;
   border: 1px solid #415362;
@@ -579,11 +628,86 @@ border-radius: 10px;
 }
 
 .screenimage {
-  position: absolute;
-  width: 716px;
-  height: 480px;
-  left: 1160px;
-  top: 104px;
+  // position: absolute;
+  // width: 43%;
+  // height: 50vh;
+  // left: 55.5%;
+  // top: 104px;
   border-radius: 16px;
 
+}
+
+.screenicon {
+  // position: absolute;
+    width: 42%;
+    height: 28.41px;
+    left: 52%;
+    top: 622px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.Workplaceheadbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FF554A;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px red;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

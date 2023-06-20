@@ -81,7 +81,9 @@ function AdminNavbar(props) {
       <Navbar className={classNames("navbar-absolute", color)} expand="lg">
         <Container fluid>
           <div className="navbar-wrapper">
-            <img style={{cursor : "pointer"}} src={require("assets/image/logo.png")} width={"5%"} alt="Air Icon" onClick={gobackDash}></img>
+            <div style={{width: "48px"}}>
+              <img style={{cursor : "pointer"}} src={require("assets/image/logo.png")} width={"5%"} alt="Air Icon" onClick={gobackDash}></img>
+            </div>
             <div
               className={classNames("navbar-toggle d-inline", {
                 toggled: props.sidebarOpened,
@@ -151,7 +153,7 @@ function AdminNavbar(props) {
               </UncontrolledDropdown> */}
               <UncontrolledDropdown nav>
                 
-                  <div className="photo">
+                  <div className="photo" style={{width:"60px"}}>
                     <img alt="..." src={require("assets/image/Dash/Image.png")} />
                   </div>
                   {/* <b className="caret d-none d-lg-block d-xl-block" /> */}
