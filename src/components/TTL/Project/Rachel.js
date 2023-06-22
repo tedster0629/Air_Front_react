@@ -72,7 +72,7 @@ export const Rachel = () => {
             <Row>
                 {RachelCardData.map((data, idx) => (
                     <Col key={idx} xl="3" lg='6' xs="12">
-                        <Card className="RachelCard mt-2">
+                        <Card className="RachelCard mt-2" style={{ cursor : "pointer"}}>
                             <img className="" src={require(`assets/image/MusicAvatar/${data.image}`)} style={{width : "22px"}} alt = "error" ></img>
                             <p>{data.title}</p>
                             <i className={data.icon}></i>

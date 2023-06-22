@@ -269,13 +269,15 @@
         padding-top: 0;
       }
 
+      
+
       .navbar-toggler-bar{
           display: block;
           position: relative;
           width: 22px;
           height: 1px;
           border-radius: 1px;
-          background: $white;
+          background: #232e37;
 
           &.navbar-kebab{
             height: 4px;

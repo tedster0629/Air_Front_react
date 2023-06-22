@@ -43,6 +43,10 @@ function AdminNavbar(props) {
   const [collapseOpen, setcollapseOpen] = React.useState(false);
   const [modalSearch, setmodalSearch] = React.useState(false);
   const [color, setcolor] = React.useState("navbar-transparent");
+
+
+  
+
   React.useEffect(() => {
     window.addEventListener("resize", updateColor);
     // Specify how to clean up after this effect:
@@ -73,17 +77,40 @@ function AdminNavbar(props) {
   };
 
   const navigate = useNavigate();
-  const gobackDash = () =>  {
+  const gobackDash = () => {
     navigate('/admin/Dashboard')
-  } 
+  }
+  const currentPath = window.location.pathname;
+
+  const onChangePage = () => {
+    navigate('/admin/user-profile');
+}
+
   return (
     <>
       <Navbar className={classNames("navbar-absolute", color)} expand="lg">
         <Container fluid>
           <div className="navbar-wrapper">
-            <div style={{width: "48px"}}>
-              <img style={{cursor : "pointer"}} src={require("assets/image/logo.png")} width={"5%"} alt="Air Icon" onClick={gobackDash}></img>
+            <div style={{ width: "48px" }}>
+              <img style={{ cursor: "pointer" }} src={require("assets/image/logo.png")} width={"5%"} alt="Air Icon" onClick={gobackDash}></img>
             </div>
+            {
+            currentPath === "/admin/Voice" || currentPath === "/admin/Music" || currentPath === "/admin/Video" ? 
+            <div onClick={gobackDash} style={{
+              display: "flex",
+              flexDirection: "row",
+              fontSize: "18px",
+              alignItems: "center",
+              color :"white",
+              cursor : "pointer"
+            }}
+            >
+              <i className="tim-icons icon-minimal-left"></i>
+              <p className="m-1">Back to Projects</p>
+            </div> : ""
+            }
+            
+
             <div
               className={classNames("navbar-toggle d-inline", {
                 toggled: props.sidebarOpened,
@@ -152,12 +179,24 @@ function AdminNavbar(props) {
                 </DropdownMenu>
               </UncontrolledDropdown> */}
               <UncontrolledDropdown nav>
-                
-                  <div className="photo" style={{width:"60px"}}>
-                    <img alt="..." src={require("assets/image/Dash/Image.png")} />
-                  </div>
-                  {/* <b className="caret d-none d-lg-block d-xl-block" /> */}
-                  <p className="d-lg-none">userimg</p>
+
+                <div className="photo" style={{ width: "60px" }}>
+                  <img onClick={onChangePage} alt="..." src={require("assets/image/Dash/Image.png")} style={{cursor : "pointer"}} />
+                  <img alt="..." src={require("assets/image/Notification Badge.png")} style={{
+                    position: "absolute",
+                    width: "30%",
+                    right: "10px"
+                  }}></img>
+                  <p style={{
+                    position: "absolute",
+                    right: "19px",
+                    top: "4px",
+                    font: "message-box",
+                    fontSize: "12px",
+                  }}>6</p>
+                </div>
+                {/* <b className="caret d-none d-lg-block d-xl-block" /> */}
+                <p className="d-lg-none">userimg</p>
                 {/* <DropdownMenu className="dropdown-navbar" right tag="ul">
                   <NavLink tag="li">
                     <DropdownItem className="nav-item">Profile</DropdownItem>
@@ -175,7 +214,7 @@ function AdminNavbar(props) {
             </Nav>
           </Collapse>
         </Container>
-      </Navbar>
+      </Navbar >
       <Modal
         modalClassName="modal-search"
         isOpen={modalSearch}

@@ -36,16 +36,16 @@ function PaymentMethod() {
                     <Card className="paymentcard">
                       <img className="cardback" src={require("assets/img/card1.jpg")} alt = "Projectimage" />
                       
-                      <div>
-                        <i className="tim-icons icon-pencil editicon"></i>
-                        <a href="https://www.example.com" className="edittitle">Edit</a>
-                      </div>
-                      <div>
-                        <i className="tim-icons icon-trash-simple deleteicon"></i>
-                        <a href="https://www.example.com" className="deletetitle">Delete</a>
-                      </div>
+                      
                     </Card>
-                  </Col>                                              
+                  </Col>  
+                  <Col lg="3">
+                    <Card className="paymentcard">
+                      <img className="cardback" src={require("assets/img/card1.jpg")} alt = "Projectimage" />
+                      
+                      
+                    </Card>
+                  </Col>                                             
                 </Row>
               </CardBody>
               <CardFooter>
