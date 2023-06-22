@@ -134,7 +134,7 @@ function UserProfile() {
                     <img
                       alt="..."
                       className="avatar"
-                      src={require("assets/img/emilyz.jpg")}
+                      src={require("assets/image/Dash/Image.png")}
                     />
                     <h1 className="title">Mike Andrew</h1>
                   </a>

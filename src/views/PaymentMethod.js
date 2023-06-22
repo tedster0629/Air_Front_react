@@ -34,14 +34,14 @@ function PaymentMethod() {
                 <Row>
                   <Col lg="3">
                     <Card className="paymentcard">
-                      <img className="cardback" src={require("assets/img/card1.jpg")} alt = "Projectimage" />
+                      <img className="cardback" src={require("assets/img/card1.png")} alt = "Projectimage" />
                       
                       
                     </Card>
                   </Col>  
                   <Col lg="3">
                     <Card className="paymentcard">
-                      <img className="cardback" src={require("assets/img/card1.jpg")} alt = "Projectimage" />
+                      <img className="cardback" src={require("assets/img/card1.png")} alt = "Projectimage" />
                       
                       
                     </Card>
