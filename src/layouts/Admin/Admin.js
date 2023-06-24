@@ -108,7 +108,7 @@ function Admin(props) {
   }, [location]);
   // this function opens and closes the sidebar on small devices
   const toggleSidebar = () => {
-    document.documentElement.classList.toggle("nav-open");
+    // document.documentElement.classList.toggle("nav-open");
     setsidebarOpened(!sidebarOpened);
   };
   const getRoutes = (routes) => {

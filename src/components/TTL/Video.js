@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Button, Card, CardBody, CardHeader } from 'reactstrap';
 // import { Nav, NavItem, NavLink } from 'react-bootstrap';
@@ -90,9 +90,21 @@ function Video() {
 
     const [hoverIndex, setHoverIndex] = useState(-1);
 
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      function handleResize() {
+        setScreenWidth(window.innerWidth);
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
+
     return (
         <div className='content row'>
-            <div className='col-6 col-md-6 col-sm-12'>
+            <div className={`col-${screenWidth > 1600 ? 6 : (screenWidth > 10 ? 12 : 12)}`}>
                 <Card className='Videocard p-3 mb-2' style={{ overflow: "auto", }}>
                     <div className='content row scrollbar' id="style-1" style={{ overflow: "auto" }}>
                         {Videocard.map((data, index) => (
@@ -101,7 +113,7 @@ function Video() {
                     </div>
                 </Card>
             </div>
-            <div className='col-6 col-md-6 col-sm-12'>
+            <div className={`col-${screenWidth > 1600 ? 6 : (screenWidth > 10 ? 12 : 12)}`}>
                 <div className='screenimage'>
                     <img src={require(`assets/image/Voice/screen.png`)} alt="" />
                 </div>

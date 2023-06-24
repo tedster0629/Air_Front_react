@@ -27,7 +27,7 @@ function ReferaFriend() {
     <>
       <div className="content">
         <Row>
-          <Col md="6">
+          <Col lg="6" className="mb-3">
             <Card>
               <CardHeader>
                 <h5 className="title">Invite Your Friend</h5>
@@ -49,7 +49,7 @@ function ReferaFriend() {
               </CardBody>
             </Card>
           </Col>
-          <Col md="6">
+          <Col lg="6">
             <Card>
               <CardHeader>
                 <h5 className="title">Share The Referral Link</h5>

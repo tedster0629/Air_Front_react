@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 // import { English } from './Project/English';
 // import { Rachel } from './Project/Rachel';
 // import { Joyful } from './Project/Joyful';
@@ -30,6 +30,18 @@ function Music() {
         setActiveButton(buttonName);
     }
 
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      function handleResize() {
+        setScreenWidth(window.innerWidth);
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
+
     const MusicCardData = [
         { name: "Music Name", time: "1:54", image: "Rectangle 119 (1).png" },
         { name: "Music Name", time: "1:54", image: "Rectangle 119 (2).png" },
@@ -53,7 +65,7 @@ function Music() {
 
     return (
         <div className='content row'>
-            <div className='col-6 col-md-6 col-sm-12'>
+            <div className={`col-${screenWidth > 1600 ? 6 : (screenWidth > 10 ? 12 : 12)}`} >
                 <Card className='Projectdes mb-2'>
                     <CardHeader style={{ display: "flex" }}>
                         <div className='col-9'>
@@ -127,15 +139,15 @@ function Music() {
                         </div>
                     </CardBody>
                 </Card>
-                <div className='row'>
-                    <div className='col-6'>
+                <div className='row  mb-2'>
+                    <div className={`col-${screenWidth > 515 ? 6 : 12} mb-2`}>
                         <Card className='p-4' style={{ height: "18.5vh" }}>
                             <div className='mt-4'><h4 style={{ textAlign: "center" }}>Volume</h4></div>
                             <input className='custom-range mt-4' type="range" min="0" max="100%" ></input>
                         </Card>
                     </div>
-                    <div className='col-6'>
-                        <Card className='p-2' style={{ height: "18.5vh", width: "100%" }}>
+                    <div className={`col-${screenWidth > 515 ? 6 : 12}`}>
+                        <Card className='p-2 ' style={{ height: "18.5vh", width: "100%" }}>
                             <div style={{
 
                                 display: "flex",
@@ -174,7 +186,7 @@ function Music() {
                     </div>
                 </div>
             </div>
-            <div className='col-6 col-md-6 col-sm-12'>
+            <div className={`col-${screenWidth > 1600 ? 6 : (screenWidth > 10 ? 12 : 12)}`} >
                 <div className='screenimage'>
                     <img src={require(`assets/image/Voice/screen.png`)} alt="" />
                 </div>
@@ -318,8 +330,19 @@ function MusicCard(props) {
         },
     }
 
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      function handleResize() {
+        setScreenWidth(window.innerWidth);
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
     return (
-        <Col xl="3" lg='6' xs="12" onMouseEnter={props.onMouseEnter} onMouseLeave={props.onMouseLeave}>
+        <Col className={`col-${screenWidth > 1850 ? 3 : (screenWidth > 610 ? 4 : (screenWidth > 415 ? 6 : 12))} `} onMouseEnter={props.onMouseEnter} onMouseLeave={props.onMouseLeave}>
             {props.showButton ? (
                 <Card className="mt-2" style={newStyle}>
                     <div style={styledImage}>

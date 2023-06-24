@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Button, Card, CardBody, CardFooter, CardHeader } from 'reactstrap';
 import { Nav, NavItem, NavLink } from 'react-bootstrap';
@@ -40,9 +40,22 @@ const Voice = () => {
         console.log(newValue);
         setValue2([newValue[0] !== 0 ? newValue[0] : newValue[1], 0].sort());
     };
+
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      function handleResize() {
+        setScreenWidth(window.innerWidth);
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
+
     return (
         <div className='content row '>
-            <div className='col-6 col-md-6 col-sm-12'>
+            <div className={`col-${screenWidth > 1600 ? 6 : (screenWidth > 10 ? 12 : 12)} mb-2`}>
                 <Card className='Projectdes'>
                     <CardHeader>
                         <Nav justify variant="tabs" defaultActiveKey="English">
@@ -122,7 +135,7 @@ const Voice = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-6 col-md-6 col-sm-12'>
+            <div className={`col-${screenWidth > 1600 ? 6 : (screenWidth > 10 ? 12 : 12)}`}>
                 <div className='screenimage'>
                     <img src={require(`assets/image/Voice/screen.png`)} alt="" />
                 </div>
