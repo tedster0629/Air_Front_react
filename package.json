@@ -52,6 +52,8 @@
     "reactstrap": "8.10.1"
   },
   "devDependencies": {
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.2",
     "typescript": "5.0.4"
   },
   "overrides": {

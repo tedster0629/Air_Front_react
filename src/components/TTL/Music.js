@@ -140,16 +140,15 @@ function Music() {
                     </CardBody>
                 </Card>
                 <div className='row  mb-2'>
-                    <div className={`col-${screenWidth > 515 ? 6 : 12} mb-2`}>
-                        <Card className='p-4' style={{ height: "18.5vh" }}>
+                    <div className={`col-${screenWidth > 515 ? 6 : 12}`} >
+                        <Card className='p-4' style={{ height: "100%",width : "100%" }}>
                             <div className='mt-4'><h4 style={{ textAlign: "center" }}>Volume</h4></div>
                             <input className='custom-range mt-4' type="range" min="0" max="100%" ></input>
                         </Card>
                     </div>
-                    <div className={`col-${screenWidth > 515 ? 6 : 12}`}>
-                        <Card className='p-2 ' style={{ height: "18.5vh", width: "100%" }}>
+                    <div className={`col-${screenWidth > 515 ? 6 : 12}`} style={{marginTop : `${screenWidth < 515 ? '10px' : '0px'}`}}>
+                        <Card className='p-2 ' style={{ height: "100%", width: "100%" }}>
                             <div style={{
-
                                 display: "flex",
                                 flexDirection: "row",
                                 justifyContent: "space-around",
@@ -166,7 +165,6 @@ function Music() {
                             </div>
                             <hr className='ml-1' size="10" width="96%" color="#324250" align="center" />
                             <div style={{
-
                                 display: "flex",
                                 flexDirection: "row",
                                 justifyContent: "space-around",
@@ -182,7 +180,6 @@ function Music() {
                                 </label>
                             </div>
                         </Card>
-
                     </div>
                 </div>
             </div>

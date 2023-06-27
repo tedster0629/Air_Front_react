@@ -44,14 +44,14 @@ const Voice = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     useEffect(() => {
-      function handleResize() {
-        setScreenWidth(window.innerWidth);
-      }
-  
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
+        function handleResize() {
+            setScreenWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
-  
+
 
     return (
         <div className='content row '>
@@ -95,33 +95,36 @@ const Voice = () => {
 
                     <CardFooter>
                         <hr size="10" width="96%" color="#324250" align="center" />
-                        <Button className="btn" color="" style={{ float: "left", paddingRight: "20px", paddingLeft: "20px" }}>
-                            Preview
-                        </Button>
-                        <Button className="btn" color="primary" style={{ float: "left", paddingRight: "20px", paddingLeft: "20px" }}>
-                            + Add to Timeline
-                        </Button>
-                        <Button className="btn" color="" style={{ float: "right", paddingRight: "20px", paddingLeft: "20px" }}>
-                            Next <i className='ml-2 tim-icons icon-minimal-right'></i>
-                        </Button>
+                        <div style={{display : "flex"}}>
+                            <Button className="btn" color="" style={{ float: "left", paddingRight: "20px", paddingLeft: "20px" }}>
+                                Preview
+                            </Button>
+                            <Button className="btn" color="primary" style={{ float: "left", paddingRight: "20px", paddingLeft: "20px" }}>
+                                + Add to Timeline
+                            </Button>
+                            <Button className="btn" color="" style={{ float: "right", paddingRight: "20px", paddingLeft: "20px" }}>
+                                Next <i className='ml-2 tim-icons icon-minimal-right'></i>
+                            </Button>
+                        </div>
+
                     </CardFooter>
                 </Card>
                 <div className='row' style={{ alignItems: "center" }}>
                     <div className='col-10'>
                         <Card className='dbscroll p-2 mt-2 mb-3'>
                             <div className='row mt-2' style={{ textAlign: "center" }}>
-                                <div className='col-2'><p>-10db</p></div>
+                                <div style={{fontSize : `${screenWidth < 450 ? "0.5rem" : "1.0624999875rem"}`}} className='col-2'><p>-10db</p></div>
                                 <div className='col-8'><h4>Volume</h4></div>
-                                <div className='col-2'><p>+10db</p></div>
+                                <div style={{fontSize : `${screenWidth < 450 ? "0.5rem" : "1.0624999875rem"}`}} className='col-2'><p>+10db</p></div>
                             </div>
                             <RangeSlider value={value} onInput={onChange} min={-100} max={100} />
 
                         </Card>
                         <Card className='speedSc p-2'>
                             <div className='row mt-2' style={{ textAlign: "center" }}>
-                                <div className='col-2'><p>Slow</p></div>
+                                <div style={{fontSize : `${screenWidth < 450 ? "0.5rem" : "1.0624999875rem"}`}} className='col-2'><p>Slow</p></div>
                                 <div className='col-8'><h4>Speed</h4></div>
-                                <div className='col-2'><p>Fast</p></div>
+                                <div style={{fontSize : `${screenWidth < 450 ? "0.5rem" : "1.0624999875rem"}`}} className='col-2'><p>Fast</p></div>
                             </div>
                             <RangeSlider value={value1} onInput={onChange1} min={-100} max={100} />
 
@@ -129,7 +132,7 @@ const Voice = () => {
                     </div>
                     <div className='col-2'>
                         <Card className='pitch mt-2'>
-                            <h4 style={{ textAlign: 'center', marginTop: "10px" }}>Pitch</h4>
+                            <h4 style={{ textAlign: 'center', marginTop: "10px" , fontSize : `${screenWidth < 450 ? "0.8rem" : "1.0624999875rem"}` }}>Pitch</h4>
                             <RangeSlider value={value2} onInput={onChange2} className="vertical-slider newvertical" orientation={"vertical"} min={-100} max={100} />
                         </Card>
                     </div>
@@ -161,7 +164,7 @@ const Voice = () => {
                             <i className='tim-icons icon-triangle-right-17 mr-3' color='red'></i>
                             <time>00:00:14</time>
                         </div>
-                        <div style={{display: "flex"}}>
+                        <div style={{ display: "flex" }}>
                             <i className='tim-icons icon-simple-delete mr-3'></i>
                             <input className='custom-range mr-3' type="range" min="0" max="100%" ></input>
                             <i className='tim-icons icon-simple-add mr-3'></i>

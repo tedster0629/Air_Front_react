@@ -143,7 +143,7 @@ function Sidebar(props) {
                 );
               })}
               <li className="logouticon">
-                <ReactstrapNavLink href="#">
+                <ReactstrapNavLink href="/auth/">
                   <i className="tim-icons icon-minimal-left" color ="primary"/>
                   <p>Logout</p>
                 </ReactstrapNavLink>

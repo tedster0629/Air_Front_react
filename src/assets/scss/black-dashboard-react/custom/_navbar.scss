@@ -112,6 +112,7 @@
 
   .navbar-toggle button:focus, .navbar-toggler{
     outline: none;
+    // visibility: hidden;
   }
 
 }
@@ -277,9 +278,10 @@
           width: 22px;
           height: 1px;
           border-radius: 1px;
-          background: #232e37;
+          background: #f7f8f8;
 
           &.navbar-kebab{
+            visibility: hidden;
             height: 4px;
             width: 4px;
             margin-bottom: 3px;
