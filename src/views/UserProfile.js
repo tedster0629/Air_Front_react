@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React,{ useState, useEffect} from "react";
 
 // reactstrap components
 import {
@@ -32,12 +32,25 @@ import {
   Col,
 } from "reactstrap";
 
+
 function UserProfile() {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      function handleResize() {
+        setScreenWidth(window.innerWidth);
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
   return (
     <>
       <div className="content">
         <Row>
-          <Col md="6">
+          <Col className={`col-${screenWidth > 1890 ? 6 : (screenWidth > 1450 ? 12 : (screenWidth > 1080 ? 12: 12))} mb-2`} >
             <Card>
               <CardHeader>
                 <h5 className="title">Edit Profile</h5>
@@ -120,8 +133,8 @@ function UserProfile() {
                 </Button>
               </CardFooter>
             </Card>
-          </Col>
-          <Col md="6">
+          </Col >
+          <Col className={`col-${screenWidth > 1890 ? 6 : (screenWidth > 1450 ? 12 : (screenWidth > 1080 ? 12 : 12))}`} >
             <Card className="card-user">
               <CardBody>
                 <CardText />
@@ -134,7 +147,7 @@ function UserProfile() {
                     <img
                       alt="..."
                       className="avatar"
-                      src={require("assets/img/emilyz.jpg")}
+                      src={require("assets/image/Dash/Image.png")}
                     />
                     <h1 className="title">Mike Andrew</h1>
                   </a>

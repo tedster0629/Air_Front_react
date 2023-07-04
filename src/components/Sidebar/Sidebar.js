@@ -28,12 +28,15 @@ import PerfectScrollbar from "perfect-scrollbar";
 import { Nav, NavLink as ReactstrapNavLink } from "reactstrap";
 import {
   BackgroundColorContext,
-  backgroundColors,
+  // backgroundColors,
 } from "contexts/BackgroundColorContext";
 
 var ps;
 
 function Sidebar(props) {
+
+  const currentPath = window.location.pathname;
+
   const location = useLocation();
   const sidebarRef = React.useRef(null);
   // verifies if routeName is the one active (in browser input)
@@ -124,7 +127,7 @@ function Sidebar(props) {
                 return (
                   <li
                     className={
-                      activeRoute(prop.path) + (prop.pro ? " active-pro" : "")
+                      "/admin/" + prop.path == currentPath ? "active-side" : ""
                     }
                     key={key}
                   >
@@ -133,15 +136,15 @@ function Sidebar(props) {
                       className="nav-link"
                       onClick={props.toggleSidebar}
                     >
-                      <i className={prop.icon} />
+                      <i className={prop.icon} style={{color : "/admin" + prop.path == currentPath ? "red" : ""}} />
                       <p>{rtlActive ? prop.rtlName : prop.name}</p>
                     </NavLink>
                   </li>
                 );
               })}
               <li className="logouticon">
-                <ReactstrapNavLink href="#">
-                  <i className="tim-icons icon-spaceship" color ="primary"/>
+                <ReactstrapNavLink href="/auth/">
+                  <i className="tim-icons icon-minimal-left" color ="primary"/>
                   <p>Logout</p>
                 </ReactstrapNavLink>
               </li>

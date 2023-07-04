@@ -33,7 +33,7 @@ function Community() {
     <>
       <div className="content">
       <Row>
-          <Col md="4">
+          <Col md="4" className="mb-2">
             <Card>
               <CardHeader>
                 <h5 className="title">Join Our Discord Group</h5>
@@ -50,7 +50,7 @@ function Community() {
               </CardBody>
             </Card>
           </Col>
-          <Col md="4">
+          <Col md="4" className="mb-2">
             <Card>
               <CardHeader>
                 <h5 className="title">Join Our Facebook Group</h5>
@@ -67,7 +67,7 @@ function Community() {
               </CardBody>
             </Card>
           </Col>
-          <Col md="4">
+          <Col md="4" className="mb-2">
             <Card>
               <CardHeader>
                 <h5 className="title">Join Our Slack Group</h5>

@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useEffect, useState} from "react";
 // react plugin for creating notifications over the dashboard
 import NotificationAlert from "react-notification-alert";
 
@@ -34,6 +34,19 @@ import {
 
 function Notifications() {
   const notificationAlertRef = React.useRef(null);
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setScreenWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return (
     <>
       <div className="content">
@@ -52,9 +65,9 @@ function Notifications() {
               <CardBody>
                 <h>Today</h>
                 <UncontrolledAlert className="alert-with-icon mt-2" color="error">
-                  <Row>
+                  <Row >
                   <span className="tim-icons icon-bell-55" data-notify="icon" />
-                    <Col md="9">
+                    <Col className={`col-md-${screenWidth > 1420 ? 9 : (screenWidth > 1450 ? 12 : (screenWidth > 10 ? 12 : 12))}`}>
                       <div>
                         <span data-notify="message">
                           You Have Successfully Purchased Tier 2 & you’re getting Tier 1 for FREE
@@ -62,7 +75,7 @@ function Notifications() {
                         <span>1:38 PM</span>
                       </div>
                     </Col>
-                    <Col md="3">
+                    <Col className={`col-md-${screenWidth > 1420 ? 3 : (screenWidth > 1450 ? 12 : (screenWidth > 10? 12 : 12))}`} >
                       <Button className="btn" color="info">My Subscription</Button>
                     </Col>
                   </Row>
@@ -70,7 +83,7 @@ function Notifications() {
                 <UncontrolledAlert className="alert-with-icon mt-2" color="error">
                   <Row>
                   <span className="tim-icons icon-bell-55" data-notify="icon" />
-                    <Col md="9">
+                    <Col className={`col-md-${screenWidth > 1420 ? 9 : (screenWidth > 1450 ? 12 : (screenWidth > 10 ? 12 : 12))}`} >
                       <div>
                         <span data-notify="message">
                         Your project rendering is finished. The title is “First Project”
@@ -78,7 +91,7 @@ function Notifications() {
                         <span>10:24 AM</span>
                       </div>
                     </Col>
-                    <Col md="3">
+                    <Col className={`col-md-${screenWidth > 1420 ? 3 : (screenWidth > 1450 ? 12 : (screenWidth > 10? 12 : 12))}`} >
                       <Button className="btn" color="primary">View Project</Button>
                     </Col>
                   </Row>

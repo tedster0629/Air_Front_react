@@ -20,7 +20,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import AdminLayout from "layouts/Admin/Admin.js";
-import RTLLayout from "layouts/RTL/RTL.js";
+
+import "./index.css"
 
 import "assets/scss/black-dashboard-react.scss";
 // import "assets/demo/demo.css";
@@ -29,6 +30,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import ThemeContextWrapper from "./components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./components/BackgroundColorWrapper/BackgroundColorWrapper";
+import { Auth } from "views/Auth";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -38,10 +40,10 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/admin/*" element={<AdminLayout />} />
-          <Route path="/rtl/*" element={<RTLLayout />} />
+          <Route path = "/auth/" element = {<Auth />} />
           <Route
             path="*"
-            element={<Navigate to="/admin/dashboard" replace />}
+            element={<Navigate to="/auth/" replace />}
           />
         </Routes>
       </BrowserRouter>

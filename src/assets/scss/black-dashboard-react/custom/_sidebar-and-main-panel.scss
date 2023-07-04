@@ -344,6 +344,8 @@
   }
 
   &[data="blue"]{
+    height: 100%;
+
     @include linear-gradient($sidebarbackgrondcolor, $success);
   }
   &[data="green"]{

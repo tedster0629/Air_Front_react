@@ -15,12 +15,25 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 // reactstrap components
 import { Card, CardHeader, CardBody, Row, Col, CardFooter, Button } from "reactstrap";
 
 function PaymentMethod() {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setScreenWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return (
     <>
       <div className="content">
@@ -32,20 +45,21 @@ function PaymentMethod() {
               </CardHeader>
               <CardBody>
                 <Row>
-                  <Col lg="3">
+     
+                  <Col className={`col-${screenWidth > 1800 ? 6 : 12} mb-2`} lg="3">
                     <Card className="paymentcard">
-                      <img className="cardback" src={require("assets/img/card1.jpg")} alt = "Projectimage" />
-                      
                       <div>
-                        <i className="tim-icons icon-pencil editicon"></i>
-                        <a href="https://www.example.com" className="edittitle">Edit</a>
-                      </div>
-                      <div>
-                        <i className="tim-icons icon-trash-simple deleteicon"></i>
-                        <a href="https://www.example.com" className="deletetitle">Delete</a>
+                      <img className="cardback" src={require("assets/img/card1.png")} alt = "Projectimage" />
                       </div>
                     </Card>
-                  </Col>                                              
+                  </Col>
+                  <Col className={`col-${screenWidth > 1800 ? 6 : 12}`}>
+                    <Card className="paymentcard">
+                      <div>
+                      <img className="cardback" src={require("assets/img/card1.png")} alt = "Projectimage" />
+                      </div>
+                    </Card>
+                  </Col>                                       
                 </Row>
               </CardBody>
               <CardFooter>
